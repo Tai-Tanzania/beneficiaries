@@ -16,4 +16,12 @@ class Character extends Model
     public function videos(){
         return $this->belongsToMany(Video::class);
     }
+
+    /**
+     * Get all of the post's comments.
+     */
+    public function comments()
+    {
+        return $this->morphMany(Comment::class, 'commentable');
+    }
 }

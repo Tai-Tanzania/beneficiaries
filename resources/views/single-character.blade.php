@@ -46,18 +46,35 @@
 
     <section class="mt-5">
         <div class="container">
-            <div class="mx-auto" style="width: 500px;">
-                <form>
-                    @csrf
-                    <div class="form-group mb-3">
-                        <span style="background: black; padding: 6px 20px; color: white; font-size: 20px">What do you think of {{ $character->name }}</span> 
-                        <br><br>
-                        <textarea name="answer" cols="100%" rows="5" class="form-control"></textarea>
+            <div class="row">
+
+                <div class="col-md-6">
+                    <form action="/character/thoughts/{{ $character->id }}" method="POST">
+                        @csrf
+                        <div class="form-group mb-3">
+                            <span style="background: black; padding: 6px 20px; color: white; font-size: 20px">What do you think of {{ $character->name }}</span> 
+                            <br><br>
+                            <textarea name="answer" cols="100%" rows="5" class="form-control"></textarea>
+                        </div>
+                        <div class="form-group text-center">
+                            <button class="btn text-white" type="submit" style="background: #e48820; padding:5px 30px">
+                                Post your thoughts
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="col-md-6">
+                    <span style="background: black; padding: 6px 20px; color: white; font-size: 20px">What others think</span>
+                    <div class="mt-3">
+                        @foreach ($character->comments as $comment)
+                            <div class="card ps-3 shadow py-1">
+                                {{ $comment->body }}
+                            </div>
+                        @endforeach
                     </div>
-                    <div class="form-group text-center">
-                        <button class="btn text-white" style="background: #e48820; padding:5px 30px">Answer</button>
-                    </div>
-                </form>
+                </div>
+
             </div>
         </div>
     </section>
