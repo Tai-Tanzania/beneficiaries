@@ -37,7 +37,7 @@
     </div>
 </section>
 
-<section>
+{{-- <section>
     <div class="container">
         <div class="row text-center" style="margin: 100px 0 30px 0">
             <h2>
@@ -61,7 +61,7 @@
             </a>
         </div>
     </div>
-</section>
+</section> --}}
 
 <section style="margin-top: 100px">
     <div class="container">
