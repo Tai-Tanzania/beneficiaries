@@ -19,6 +19,10 @@
             <h2>
                 <span style="background: black; padding: 0px 20px; color: white">Discuss</span>
             </h2>
+            <br>
+            <div class="mx-auto mt-2">
+                <img src="storytelling4change.png" alt="..." style="max-width: 30rem">
+            </div>
         </div>
         <div class="row" style="margin-top: 70px">
 
@@ -47,6 +51,10 @@
                                     <label for="">Title</label>
                                     <input type="text" name="title" class="form-control">
                                 </div>
+                                {{-- <div class="form-group mb-3">
+                                    <label for="">Image</label>
+                                    <input type="file" name="image" class="form-control">
+                                </div> --}}
                                 <div class="form-group mb-3">
                                     <label for="">Content</label>
                                     <textarea name="body" id="" cols="100%" rows="5" class="form-control"></textarea>
@@ -63,7 +71,7 @@
             </div>
 
             @foreach ($forum as $post)
-            <div class="card mb-3 shadow" style="width: 100%">
+            <div class="card mb-3 shadow mb-5" style="width: 100%">
                 <div class="card-body">
                     <h5>{{ $post->title }}</h5>
                     <br>
@@ -80,6 +88,28 @@
         </div>
 
         <div class="col-md-3">
+
+
+            <div class="card mb-3" style="width: 100%">
+                <div class="card-body d-flex flex-row justify-content-between">
+
+                   @if (\Illuminate\Support\Facades\Auth::check())
+                        <div>
+                            Logged in as <a href="#">{{ Auth::user()->username }}</a> <br>
+                            <a href="/logout">Logout</a>
+                        </div>
+                    @else
+                    <a href="/login">
+                        Login
+                    </a>
+                    <a href="/register">
+                        Sign Up
+                    </a>
+                    @endif
+                </div>
+            </div>
+
+
             <div class="card" style="width: 100%">
                 <div class="card-header">
                     <strong>Rules</strong>
@@ -92,6 +122,12 @@
                     </ol>
                 </div>
             </div>
+
+            <div class="mt-5">
+                <img src="Lucy_promo.png" alt="zongwe" style="max-width: 100%">
+            </div>
+
+
         </div>
 
     </div>

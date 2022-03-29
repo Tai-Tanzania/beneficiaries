@@ -1,5 +1,5 @@
 @component('layouts.new')
-    <section style="margin-top: 150px">
+    <section style="margin-top: 150px; background-image: url('Zongwe_promo.png'); background-position: center left; background-repeat: no-repeat; background-size:contain">
         <div class="container mt-3">
             <div class="row text-center">
                 <h2>

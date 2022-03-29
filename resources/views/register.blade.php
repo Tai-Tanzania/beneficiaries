@@ -1,12 +1,12 @@
 @component('layouts.new')
-    <section style="margin-top: 150px">
+    <section style="margin-top: 150px; background-image: url('sofie.png'); background-position: 500px 100px; background-repeat: no-repeat; background-size:contain">
         <div class="container mt-3">
             <div class="row text-center">
                 <h2>
                    <span style="background: black; padding: 0px 20px; color: white">REGISTER</span> 
                 </h2>
             </div>
-            <div class="d-flex flex-row justify-content-center" style="margin-top: 70px">
+            <div class="d-flex flex-row justify-content-center" style="margin-top: 70px;">
                 
                 <div class="card" style="width: 30rem">
                     <div class="card-body">

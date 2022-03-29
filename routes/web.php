@@ -20,7 +20,7 @@ use App\Http\Controllers\PostController;
 |
 */
 
-Route::get('/',[HomeController::class, 'index'])->name('login');
+// Route::get('/',[HomeController::class, 'index'])->name('login');
 
 Route::get('videos',[VideoController::class, 'index']);
 
@@ -38,7 +38,7 @@ Route::get('login', function(){
     return view('login');
 });
 
-Route::get('forum',[PostController::class,'index']);
+Route::get('/',[PostController::class,'index'])->name('login');
 Route::post('forum',[PostController::class,'store']);
 Route::post('comment/{id}',[PostController::class,'comment']);
 

@@ -33,7 +33,7 @@ class AuthController extends Controller
 
         if (Auth::attempt(['username' => $request->username, 'password' => $request->password])) {
             // Authentication was successful...
-            return redirect()->intended('dashboard');
+            return redirect('/');
         }
 
         return \redirect()->back();

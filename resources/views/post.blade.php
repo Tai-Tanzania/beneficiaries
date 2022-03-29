@@ -20,8 +20,12 @@
         <div class="row" style="margin-top: 70px">
 
             <div class="col-md-8">
+
+                <a class="btn text-white" href="/" style="background: #e48820;">
+                    < &nbsp; Go back to all posts
+                </a>
                
-                <div class="card mb-4" style="width: 100%">
+                <div class="card my-4" style="width: 100%">
                     <div class="card-body">
                         <h4>
                             {{ $post->title }}

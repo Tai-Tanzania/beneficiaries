@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Validator;
 class PostController extends Controller
 {
     public function index(){
-        $forum = Post::paginate(10);
+        $forum = Post::orderBy('id','desc')->simplePaginate(10);
         return view('forum', \compact('forum'));
     }
 
